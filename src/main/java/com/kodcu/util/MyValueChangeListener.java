@@ -22,8 +22,7 @@ public class MyValueChangeListener implements ValueChangeListener {
 
         FacesContext context = FacesContext.getCurrentInstance();
 
-        CustomizedBean myBean =
-                (CustomizedBean) context.getApplication().evaluateExpressionGet(context, "#{customizedBean}", CustomizedBean.class);
+        CustomizedBean myBean = (CustomizedBean) context.getApplication().evaluateExpressionGet(context, "#{customizedBean}", CustomizedBean.class);
 
         myBean.setYansima(event.getNewValue().toString());
         System.out.println("*********** " + event.getNewValue().toString() + " ***********");
